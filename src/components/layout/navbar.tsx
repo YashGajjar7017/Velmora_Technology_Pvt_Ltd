@@ -1,6 +1,6 @@
 'use client'
 
-import { Cpu, Menu, ArrowRight, ChevronRight } from 'lucide-react'
+import { Menu, ArrowRight, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -27,11 +27,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
           onClick={() => onNavigate('home')}
           className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-600">
-            <Cpu className="h-5 w-5 text-white" />
-          </div>
+          <img
+            src="/logo.svg"
+            alt="Velmora"
+            className="h-8 w-8"
+          />
           <span className="text-xl font-bold tracking-tight">
-            Vel<span className="text-emerald-600">mora</span>
+            Velmora
           </span>
         </button>
 
@@ -81,11 +83,13 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <SheetContent side="right" className="w-[300px] p-0">
               <SheetHeader className="border-b p-4">
                 <SheetTitle className="flex items-center gap-2.5">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600">
-                    <Cpu className="h-4 w-4 text-white" />
-                  </div>
+                  <img
+                    src="/logo.svg"
+                    alt="Velmora"
+                    className="h-7 w-7"
+                  />
                   <span className="text-lg font-bold tracking-tight">
-                    Vel<span className="text-emerald-600">mora</span>
+                    Velmora
                   </span>
                 </SheetTitle>
               </SheetHeader>
