@@ -47,12 +47,6 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               animate="visible"
               className="flex flex-col items-start gap-6"
             >
-              <motion.div variants={fadeUp} custom={0}>
-                <Badge variant="secondary" className="gap-1.5 px-3 py-1.5 text-sm font-medium">
-                  🚀 Innovating since 2018
-                </Badge>
-              </motion.div>
-
               <motion.h1
                 variants={fadeUp}
                 custom={0.1}
