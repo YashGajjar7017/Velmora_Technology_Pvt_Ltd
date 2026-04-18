@@ -67,7 +67,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 custom={0.2}
                 className="max-w-lg text-lg text-muted-foreground"
               >
-                NexaTech Solutions delivers end-to-end IT services — from custom software
+                Velmora delivers end-to-end IT services — from custom software
                 development and cloud migration to cybersecurity and AI-powered solutions. We
                 partner with businesses to drive digital transformation and lasting results.
               </motion.p>
@@ -103,7 +103,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-transparent z-10" />
                 <img
                   src="/hero-image.png"
-                  alt="NexaTech Solutions — IT services hero"
+                  alt="Velmora — IT services hero"
                   className="h-auto w-full object-cover"
                 />
               </div>
@@ -389,7 +389,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               Ready to Transform Your Business?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-emerald-100">
-              Let&apos;s discuss how NexaTech Solutions can help you achieve your technology goals
+              Let&apos;s discuss how Velmora can help you achieve your technology goals
               and drive measurable growth.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

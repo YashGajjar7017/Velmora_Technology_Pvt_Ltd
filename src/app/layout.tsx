@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NexaTech Solutions — IT Services & Digital Transformation",
+  title: "Velmora — IT Services & Digital Transformation",
   description:
-    "Transforming ideas into digital reality. NexaTech Solutions offers web development, cloud solutions, cybersecurity, mobile apps, AI & ML, and IT consulting services.",
+    "Transforming ideas into digital reality. Velmora offers web development, cloud solutions, cybersecurity, mobile apps, AI & ML, and IT consulting services.",
   keywords: [
     "IT services",
     "web development",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "machine learning",
     "IT consulting",
     "digital transformation",
-    "NexaTech",
+    "Velmora",
   ],
-  authors: [{ name: "NexaTech Solutions" }],
+  authors: [{ name: "Velmora" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },

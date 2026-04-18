@@ -201,7 +201,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'CTO, FinVault Inc.',
     initials: 'SM',
     quote:
-      'NexaTech transformed our legacy systems into a modern cloud platform. The team was professional, responsive, and delivered beyond our expectations.',
+      'Velmora transformed our legacy systems into a modern cloud platform. The team was professional, responsive, and delivered beyond our expectations.',
     stars: 5,
   },
   {
@@ -217,7 +217,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'VP Engineering, LogiCore',
     initials: 'ER',
     quote:
-      'The cybersecurity audit NexaTech conducted revealed critical vulnerabilities we had missed. Their remediation plan was thorough and effective.',
+      'The cybersecurity audit Velmora conducted revealed critical vulnerabilities we had missed. Their remediation plan was thorough and effective.',
     stars: 5,
   },
 ]

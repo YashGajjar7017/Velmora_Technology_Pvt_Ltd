@@ -99,7 +99,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             <motion.div variants={fadeUp} className="relative">
               <img
                 src="/about-image.png"
-                alt="NexaTech Solutions team collaborating"
+                alt="Velmora team collaborating"
                 className="w-full rounded-2xl shadow-xl object-cover"
               />
             </motion.div>
@@ -110,7 +110,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 Our Story
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Founded in 2018, NexaTech Solutions started with a simple mission: to
+                Founded in 2018, Velmora started with a simple mission: to
                 bridge the gap between complex technology and everyday business needs.
                 What began as a small team of three passionate engineers has grown into a
                 full-service IT company serving clients across industries and continents.
@@ -209,7 +209,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               variants={fadeUp}
               className="mt-4 text-muted-foreground mx-auto max-w-2xl"
             >
-              The talented people behind NexaTech who turn vision into reality every single day.
+              The talented people behind Velmora who turn vision into reality every single day.
             </motion.p>
           </motion.div>
 
@@ -261,7 +261,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               variants={fadeUp}
               className="mt-4 text-muted-foreground mx-auto max-w-2xl"
             >
-              What sets NexaTech apart from the rest — and why our clients keep coming back.
+              What sets Velmora apart from the rest — and why our clients keep coming back.
             </motion.p>
           </motion.div>
 
@@ -311,7 +311,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               variants={fadeUp}
               className="mx-auto max-w-xl text-emerald-100/90"
             >
-              Let&apos;s discuss how NexaTech can help transform your business with innovative technology solutions.
+              Let&apos;s discuss how Velmora can help transform your business with innovative technology solutions.
             </motion.p>
             <motion.div variants={fadeUp}>
               <Button

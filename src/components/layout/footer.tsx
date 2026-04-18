@@ -18,7 +18,7 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <Cpu className="h-7 w-7 text-emerald-500" />
-              <span className="text-xl font-bold text-white">NexaTech</span>
+              <span className="text-xl font-bold text-white">Vel<span className="text-emerald-400">mora</span></span>
             </div>
             <p className="text-sm leading-relaxed text-gray-400">
               Empowering businesses through innovative technology solutions. Your trusted partner for digital transformation.
@@ -104,10 +104,10 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-emerald-600" />
                 <a
-                  href="mailto:hello@nexatech.io"
+                  href="mailto:hello@velmora.io"
                   className="text-sm text-gray-400 transition-colors hover:text-emerald-400"
                 >
-                  hello@nexatech.io
+                  hello@velmora.io
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
         <Separator className="my-8 bg-gray-700" />
 
         <div className="text-center text-sm text-gray-500">
-          © 2026 NexaTech Solutions. All rights reserved.
+          © 2026 Velmora. All rights reserved.
         </div>
       </div>
     </footer>

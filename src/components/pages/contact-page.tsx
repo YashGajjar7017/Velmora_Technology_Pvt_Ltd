@@ -251,7 +251,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                   <Separator />
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-emerald-600 shrink-0" />
-                    <span className="text-sm text-muted-foreground">hello@nexatech.io</span>
+                    <span className="text-sm text-muted-foreground">hello@velmora.io</span>
                   </div>
                   <Separator />
                   <div className="flex items-center gap-3">

@@ -31,7 +31,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
             <Cpu className="h-5 w-5 text-white" />
           </div>
           <span className="text-xl font-bold tracking-tight">
-            Nexa<span className="text-emerald-600">Tech</span>
+            Vel<span className="text-emerald-600">mora</span>
           </span>
         </button>
 
@@ -85,7 +85,7 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
                     <Cpu className="h-4 w-4 text-white" />
                   </div>
                   <span className="text-lg font-bold tracking-tight">
-                    Nexa<span className="text-emerald-600">Tech</span>
+                    Vel<span className="text-emerald-600">mora</span>
                   </span>
                 </SheetTitle>
               </SheetHeader>
