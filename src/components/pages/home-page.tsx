@@ -403,8 +403,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10"
+                className="border-2 border-white bg-transparent text-white hover:bg-white/15"
                 onClick={() => onNavigate('about')}
               >
                 Learn More
