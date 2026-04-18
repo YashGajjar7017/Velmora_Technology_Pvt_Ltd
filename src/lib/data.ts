@@ -330,7 +330,7 @@ export interface PricingPlan {
 export const PRICING_PLANS: PricingPlan[] = [
   {
     name: 'Starter',
-    price: '$2,499',
+    price: '₹2,09,999',
     period: '/project',
     description: 'Perfect for small businesses and startups getting off the ground.',
     features: [
@@ -346,7 +346,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: 'Professional',
-    price: '$7,999',
+    price: '₹6,69,999',
     period: '/project',
     description: 'Ideal for growing businesses that need a robust digital presence.',
     features: [
