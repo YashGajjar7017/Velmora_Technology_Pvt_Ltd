@@ -30,9 +30,6 @@ export const metadata: Metadata = {
     "Velmora",
   ],
   authors: [{ name: "Velmora" }],
-  icons: {
-    icon: "/logo.svg",
-  },
 };
 
 export default function RootLayout({
