@@ -222,20 +222,45 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ]
 
-/* ─── Team Members ─── */
+/* ─── Leadership ─── */
+export interface Leader {
+  name: string
+  role: string
+  image: string
+  bio: string
+}
+
+export const FOUNDERS: Leader[] = [
+  {
+    name: 'Alex Johnson',
+    role: 'Founder & CEO',
+    image: '/founder.png',
+    bio: 'Alex founded Velmora in 2018 with a vision to make world-class IT services accessible to businesses of every size. With over 15 years of experience in software engineering and business strategy, he has led the company from a three-person startup to a full-service IT firm serving clients across continents. His passion for innovation and client success drives everything Velmora does.',
+  },
+  {
+    name: 'Priya Sharma',
+    role: 'Co-Founder & CTO',
+    image: '/co-founder.png',
+    bio: 'Priya brings deep technical expertise and a forward-thinking approach to Velmora. With a background in cloud architecture and AI from top-tier tech companies, she oversees all technical operations and innovation. Her leadership ensures Velmora stays at the cutting edge while maintaining the reliability and security clients depend on.',
+  },
+]
+
+/* ─── Team Members (text-only) ─── */
 export interface TeamMember {
   name: string
   role: string
-  initials: string
+  department: string
 }
 
 export const TEAM: TeamMember[] = [
-  { name: 'Alex Johnson', role: 'CEO & Founder', initials: 'AJ' },
-  { name: 'Priya Sharma', role: 'CTO', initials: 'PS' },
-  { name: 'Marcus Lee', role: 'Head of Design', initials: 'ML' },
-  { name: 'Sofia Garcia', role: 'Lead Developer', initials: 'SG' },
-  { name: 'James Wilson', role: 'Cloud Architect', initials: 'JW' },
-  { name: 'Aisha Patel', role: 'Security Lead', initials: 'AP' },
+  { name: 'Marcus Lee', role: 'Head of Design', department: 'Design' },
+  { name: 'Sofia Garcia', role: 'Lead Developer', department: 'Engineering' },
+  { name: 'James Wilson', role: 'Cloud Architect', department: 'Infrastructure' },
+  { name: 'Aisha Patel', role: 'Security Lead', department: 'Cybersecurity' },
+  { name: 'Ryan O\'Brien', role: 'Project Manager', department: 'Operations' },
+  { name: 'Mei Lin', role: 'Data Scientist', department: 'AI & Analytics' },
+  { name: 'Carlos Rivera', role: 'DevOps Engineer', department: 'Infrastructure' },
+  { name: 'Nadia Hassan', role: 'UX Researcher', department: 'Design' },
 ]
 
 /* ─── Portfolio Projects ─── */

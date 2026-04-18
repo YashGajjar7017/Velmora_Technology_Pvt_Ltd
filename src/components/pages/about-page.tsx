@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { STATS, TEAM, WHY_US } from '@/lib/data'
+import { STATS, TEAM, FOUNDERS, WHY_US } from '@/lib/data'
 import {
   Card,
   CardHeader,
@@ -9,9 +9,8 @@ import {
   CardDescription,
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Target, Eye, Heart } from 'lucide-react'
+import { ArrowRight, Target, Eye, Heart, Linkedin, Twitter } from 'lucide-react'
 
 interface AboutPageProps {
   onNavigate: (page: string) => void
@@ -189,7 +188,86 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         </div>
       </section>
 
-      {/* ─── Our Team ─── */}
+      {/* ─── Founder & Co-Founder ─── */}
+      <section className="py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="text-center mb-12"
+          >
+            <motion.h2
+              variants={fadeUp}
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+            >
+              Our Leadership
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              className="mt-4 text-muted-foreground mx-auto max-w-2xl"
+            >
+              The visionary leaders who founded Velmora and continue to steer the company toward excellence.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto"
+          >
+            {FOUNDERS.map((leader) => (
+              <motion.div
+                key={leader.name}
+                variants={fadeUp}
+                whileHover={{ y: -6 }}
+                className="flex flex-col items-center rounded-2xl border bg-card p-8 text-center shadow-sm transition-shadow hover:shadow-lg"
+              >
+                {/* Founder Image */}
+                <div className="mb-6 h-48 w-48 overflow-hidden rounded-full border-4 border-emerald-100 shadow-md">
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                {/* Name & Role */}
+                <h3 className="text-xl font-bold">{leader.name}</h3>
+                <Badge className="mt-2 bg-emerald-100 text-emerald-700 border-emerald-200 hover:bg-emerald-200">
+                  {leader.role}
+                </Badge>
+
+                {/* Bio */}
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                  {leader.bio}
+                </p>
+
+                {/* Social Links */}
+                <div className="mt-5 flex items-center gap-3">
+                  <button
+                    aria-label={`${leader.name} LinkedIn`}
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-emerald-600 hover:text-white"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </button>
+                  <button
+                    aria-label={`${leader.name} Twitter`}
+                    className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-emerald-600 hover:text-white"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── Our Team (text-only) ─── */}
       <section className="py-16 md:py-24 bg-muted/40">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -218,23 +296,20 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
             {TEAM.map((member) => (
               <motion.div
                 key={member.name}
                 variants={fadeUp}
-                className="flex flex-col items-center gap-3 rounded-xl border bg-card p-6 text-center shadow-sm"
+                whileHover={{ y: -4 }}
+                className="flex flex-col items-center gap-2 rounded-xl border bg-card p-5 text-center shadow-sm transition-shadow hover:shadow-md"
               >
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  <Avatar className="h-20 w-20">
-                    <AvatarFallback className="bg-emerald-100 text-emerald-700 text-lg font-semibold">
-                      {member.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                </motion.div>
-                <h3 className="text-lg font-semibold">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
+                <h3 className="text-base font-semibold">{member.name}</h3>
+                <p className="text-sm text-emerald-600 font-medium">{member.role}</p>
+                <Badge variant="outline" className="text-xs text-muted-foreground">
+                  {member.department}
+                </Badge>
               </motion.div>
             ))}
           </motion.div>
