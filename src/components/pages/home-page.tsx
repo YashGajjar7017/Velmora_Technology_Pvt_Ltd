@@ -107,17 +107,6 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   className="h-auto w-full object-cover"
                 />
               </div>
-
-              {/* Floating stats card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="absolute -bottom-4 -left-4 z-20 rounded-xl border bg-background/90 p-4 shadow-lg backdrop-blur-sm"
-              >
-                <p className="text-2xl font-bold text-emerald-600">200+ Projects</p>
-                <p className="text-sm text-muted-foreground">Delivered on time</p>
-              </motion.div>
             </motion.div>
           </div>
         </div>
