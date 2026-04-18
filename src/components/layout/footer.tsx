@@ -1,6 +1,6 @@
 'use client'
 
-import { Cpu, MapPin, Mail, Phone, Twitter, Linkedin, Github, Youtube } from 'lucide-react'
+import { MapPin, Mail, Phone, Twitter, Linkedin, Github, Youtube } from 'lucide-react'
 import { NAV_ITEMS, SERVICES } from '@/lib/data'
 import { Separator } from '@/components/ui/separator'
 
@@ -17,8 +17,12 @@ export default function Footer({ currentPage, onNavigate }: FooterProps) {
           {/* Column 1: Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Cpu className="h-7 w-7 text-emerald-500" />
-              <span className="text-xl font-bold text-white">Vel<span className="text-emerald-400">mora</span></span>
+              <img
+                src="/logo.svg"
+                alt="Velmora"
+                className="h-8 w-8"
+              />
+              <span className="text-xl font-bold text-white">Velmora</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-400">
               Empowering businesses through innovative technology solutions. Your trusted partner for digital transformation.
