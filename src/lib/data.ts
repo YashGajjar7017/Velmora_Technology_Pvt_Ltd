@@ -245,7 +245,7 @@ export const FOUNDERS: Leader[] = [
     image: '/co-founder.png',
     bio: 'Yash brings deep technical expertise and a forward-thinking approach to Velmora. With a background in cloud architecture and AI from top-tier tech companies, He oversees all technical operations and innovation. Her leadership ensures Velmora stays at the cutting edge while maintaining the reliability and security clients depend on.',
     linkedin: 'https://www.linkedin.com/in/Yash_gajjar_offical/',
-    // twitter: 'https://twitter.com/Yash_gajjar_offical',
+    twitter: 'https://twitter.com/Yash_gajjar_offical',
   },
 ]
 
