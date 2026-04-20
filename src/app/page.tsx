@@ -10,9 +10,12 @@ import AboutPage from '@/components/pages/about-page'
 import PortfolioPage from '@/components/pages/portfolio-page'
 import PricingPage from '@/components/pages/pricing-page'
 import ContactPage from '@/components/pages/contact-page'
+import LoginPage from '@/components/pages/login-page'
+import SignupPage from '@/components/pages/signup-page'
+import { CursorFollower } from '@/components/ui/cursor-follower'
 import type { PageName } from '@/lib/data'
 
-const VALID_PAGES: PageName[] = ['home', 'services', 'about', 'portfolio', 'pricing', 'contact']
+const VALID_PAGES: PageName[] = ['home', 'services', 'about', 'portfolio', 'pricing', 'contact', 'login', 'signup']
 
 function getInitialPage(): PageName {
   if (typeof window === 'undefined') return 'home'
@@ -79,6 +82,10 @@ export default function Home() {
         return <PricingPage onNavigate={handleNavigate} />
       case 'contact':
         return <ContactPage onNavigate={handleNavigate} />
+      case 'login':
+        return <LoginPage onNavigate={handleNavigate} />
+      case 'signup':
+        return <SignupPage onNavigate={handleNavigate} />
       default:
         return <HomePage onNavigate={handleNavigate} />
     }
@@ -86,6 +93,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <CursorFollower />
       <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
       <main className="flex-1">
         <AnimatePresence mode="wait">

@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 
 /* ─── Navigation ─── */
-export type PageName = 'home' | 'services' | 'about' | 'portfolio' | 'pricing' | 'contact'
+export type PageName = 'home' | 'services' | 'about' | 'portfolio' | 'pricing' | 'contact' | 'login' | 'signup'
 
 export interface NavItem {
   label: string
@@ -228,6 +228,9 @@ export interface Leader {
   role: string
   image: string
   bio: string
+  linkedin?: string
+  twitter?: string
+  github?: string
 }
 
 export const FOUNDERS: Leader[] = [
@@ -318,6 +321,84 @@ export const PROJECTS: Project[] = [
     description:
       'Interactive learning platform with real-time collaboration features serving 50K+ students.',
     tags: ['Vue.js', 'WebRTC', 'MongoDB', 'Socket.io'],
+  },
+  {
+    title: 'AI Website Builder',
+    category: 'Web Development',
+    description:
+      'Innovative AI-powered website builder that generates complete layouts and content from simple text prompts. Features editable sections and one-click deployment.',
+    tags: ['Next.js', 'OpenAI', 'TypeScript', 'Tailwind CSS'],
+    image: '/projects/ai-website-builder.png',
+    stats: [
+      { label: 'Websites Generated', value: '50K+' },
+      { label: 'Template Variations', value: '200+' },
+      { label: 'Deploy Time', value: '<2min' },
+    ],
+  },
+  {
+    title: 'Offline-First Sync App',
+    category: 'Mobile Development',
+    description:
+      'Advanced notes and tasks application that works seamlessly without internet connection. Automatic syncing with intelligent conflict resolution when online.',
+    tags: ['React Native', 'SQLite', 'WebSocket', 'Redux'],
+    image: '/projects/offline-sync.png',
+    stats: [
+      { label: 'Sync Conflicts Resolved', value: '99.9%' },
+      { label: 'Offline Users', value: '150K+' },
+      { label: 'Data Integrity', value: '100%' },
+    ],
+  },
+  {
+    title: 'Distributed Job Queue System',
+    category: 'Cloud Solutions',
+    description:
+      'Enterprise-grade background job queue with worker pools, intelligent retry logic, and advanced task scheduling. Built for high-throughput distributed systems.',
+    tags: ['Node.js', 'Redis', 'RabbitMQ', 'Kubernetes'],
+    image: '/projects/job-queue.png',
+    stats: [
+      { label: 'Jobs/Second', value: '10K+' },
+      { label: 'Retry Success Rate', value: '98%' },
+      { label: 'Processing Nodes', value: '500+' },
+    ],
+  },
+  {
+    title: 'Autonomous AI Agent',
+    category: 'AI & Machine Learning',
+    description:
+      'Multi-step autonomous agent that handles complex workflows like lead finding, summarization, and automated messaging. Powered by advanced AI with memory and tool integration.',
+    tags: ['Python', 'LangChain', 'GPT-4', 'AutoGPT'],
+    image: '/projects/ai-agent.png',
+    stats: [
+      { label: 'Tasks Completed', value: '100K+' },
+      { label: 'Success Rate', value: '96%' },
+      { label: 'Avg Steps/Task', value: '7.3' },
+    ],
+  },
+  {
+    title: 'Real-Time Collaboration Dashboard',
+    category: 'Web Development',
+    description:
+      'Live collaborative dashboard similar to Google Docs, enabling multiple users to edit shared data simultaneously with real-time updates and presence awareness.',
+    tags: ['Next.js', 'WebSocket', 'Y.js', 'PostgreSQL'],
+    image: '/projects/collab-dashboard.png',
+    stats: [
+      { label: 'Concurrent Users', value: '500+' },
+      { label: 'Sync Latency', value: '<100ms' },
+      { label: 'Uptime', value: '99.99%' },
+    ],
+  },
+  {
+    title: 'Headless CMS + Visual Editor',
+    category: 'Web Development',
+    description:
+      'Powerful headless CMS with drag-drop visual editor for creating content and editing live previews. Supports multiple output formats and versions.',
+    tags: ['Next.js', 'GraphQL', 'React DnD', 'MongoDB'],
+    image: '/projects/headless-cms.png',
+    stats: [
+      { label: 'Content Pieces', value: '1M+' },
+      { label: 'API Calls/Day', value: '50M+' },
+      { label: 'Avg Load Time', value: '300ms' },
+    ],
   },
 ]
 
