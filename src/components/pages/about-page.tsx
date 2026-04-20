@@ -248,20 +248,21 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
 
                 {/* Social Links */}
                 <div className="mt-5 flex items-center gap-3">
-                  <button
-                    aria-label={`${leader.name} LinkedIn`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-emerald-600 hover:text-white"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                  </button>
-                  <button
-                    aria-label={`${leader.name} Twitter`}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-emerald-600 hover:text-white"
-                  >
-                    <Twitter className="h-4 w-4" />
-                  </button>
+                <a
+                  href={leader.linkedin}   // add this field in your FOUNDERS data
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-emerald-600 hover:text-white"
+                   >
+                   <Linkedin className="h-4 w-4" />
+                </a>
+                <a href={leader.twitter} 
+                target="_blank" rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-emerald-600 hover:text-white">
+                   <Twitter className="h-4 w-4" />
+               </a>
                 </div>
-              </motion.div>
+               </motion.div>
             ))}
           </motion.div>
         </div>
@@ -287,7 +288,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               variants={fadeUp}
               className="mt-4 text-muted-foreground mx-auto max-w-2xl"
             >
-              The talented people behind Velmora who turn vision into reality every single day.
+              Tower 2 ,Gifr City , Gandhinagar , Gujarat , India.
             </motion.p>
           </motion.div>
 

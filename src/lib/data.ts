@@ -232,16 +232,20 @@ export interface Leader {
 
 export const FOUNDERS: Leader[] = [
   {
-    name: 'Alex Johnson',
+    name: 'Abhishek Vaghela',
     role: 'Founder & CEO',
     image: '/founder.png',
     bio: 'Alex founded Velmora in 2018 with a vision to make world-class IT services accessible to businesses of every size. With over 15 years of experience in software engineering and business strategy, he has led the company from a three-person startup to a full-service IT firm serving clients across continents. His passion for innovation and client success drives everything Velmora does.',
+    linkedin: 'https://www.linkedin.com/in/vaghela-abhishek-3753b9291',
+    twitter: 'https://twitter.com/VaghelaAbh56890',
   },
   {
-    name: 'Priya Sharma',
+    name: 'Yash Gajjar',
     role: 'Co-Founder & CTO',
     image: '/co-founder.png',
-    bio: 'Priya brings deep technical expertise and a forward-thinking approach to Velmora. With a background in cloud architecture and AI from top-tier tech companies, she oversees all technical operations and innovation. Her leadership ensures Velmora stays at the cutting edge while maintaining the reliability and security clients depend on.',
+    bio: 'Yash brings deep technical expertise and a forward-thinking approach to Velmora. With a background in cloud architecture and AI from top-tier tech companies, He oversees all technical operations and innovation. Her leadership ensures Velmora stays at the cutting edge while maintaining the reliability and security clients depend on.',
+    linkedin: 'https://www.linkedin.com/in/Yash_gajjar_offical/',
+    // twitter: 'https://twitter.com/Yash_gajjar_offical',
   },
 ]
 
@@ -253,14 +257,14 @@ export interface TeamMember {
 }
 
 export const TEAM: TeamMember[] = [
-  { name: 'Marcus Lee', role: 'Head of Design', department: 'Design' },
-  { name: 'Sofia Garcia', role: 'Lead Developer', department: 'Engineering' },
-  { name: 'James Wilson', role: 'Cloud Architect', department: 'Infrastructure' },
-  { name: 'Aisha Patel', role: 'Security Lead', department: 'Cybersecurity' },
-  { name: 'Ryan O\'Brien', role: 'Project Manager', department: 'Operations' },
-  { name: 'Mei Lin', role: 'Data Scientist', department: 'AI & Analytics' },
-  { name: 'Carlos Rivera', role: 'DevOps Engineer', department: 'Infrastructure' },
-  { name: 'Nadia Hassan', role: 'UX Researcher', department: 'Design' },
+  { name: 'Krish Parikh', role: 'Head of Design', department: 'Design' },
+  { name: 'Darshit Solanki', role: 'Lead Developer', department: 'Engineering' },
+  { name: 'Diya Sharma', role: 'Cloud Architect', department: 'Infrastructure' },
+  { name: 'Jay Bhatt', role: 'Security Lead', department: 'Cybersecurity' },
+  { name: 'Nisarg Vasayiya', role: 'Project Manager', department: 'Operations' },
+  { name: 'Rudhra Vyas', role: 'Data Scientist', department: 'AI & Analytics' },
+  { name: 'Yogesh Rana', role: 'DevOps Engineer', department: 'Infrastructure' },
+  { name: 'Meghna Parmar', role: 'UX Researcher', department: 'Design' },
 ]
 
 /* ─── Portfolio Projects ─── */
@@ -330,7 +334,7 @@ export interface PricingPlan {
 export const PRICING_PLANS: PricingPlan[] = [
   {
     name: 'Starter',
-    price: '₹2,09,999',
+    price: '₹49,000',
     period: '/project',
     description: 'Perfect for small businesses and startups getting off the ground.',
     features: [
@@ -346,7 +350,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     name: 'Professional',
-    price: '₹6,69,999',
+    price: '₹99,000',
     period: '/project',
     description: 'Ideal for growing businesses that need a robust digital presence.',
     features: [
