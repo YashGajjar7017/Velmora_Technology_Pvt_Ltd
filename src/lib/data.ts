@@ -238,6 +238,7 @@ export const FOUNDERS: Leader[] = [
     bio: 'Alex founded Velmora in 2018 with a vision to make world-class IT services accessible to businesses of every size. With over 15 years of experience in software engineering and business strategy, he has led the company from a three-person startup to a full-service IT firm serving clients across continents. His passion for innovation and client success drives everything Velmora does.',
     linkedin: 'https://www.linkedin.com/in/vaghela-abhishek-3753b9291',
     twitter: 'https://twitter.com/VaghelaAbh56890',
+    
   },
   {
     name: 'Yash Gajjar',
@@ -245,7 +246,7 @@ export const FOUNDERS: Leader[] = [
     image: '/co-founder.png',
     bio: 'Yash brings deep technical expertise and a forward-thinking approach to Velmora. With a background in cloud architecture and AI from top-tier tech companies, He oversees all technical operations and innovation. Her leadership ensures Velmora stays at the cutting edge while maintaining the reliability and security clients depend on.',
     linkedin: 'https://www.linkedin.com/in/Yash_gajjar_offical/',
-    twitter: 'https://twitter.com/Yash_gajjar_offical',
+    // twitter: 'https://twitter.com/Yash_gajjar_offical',
   },
 ]
 
