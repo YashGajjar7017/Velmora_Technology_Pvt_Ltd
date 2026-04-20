@@ -69,10 +69,10 @@ function FAQSectionItem({ item }: { item: FAQItem }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="border rounded-lg overflow-hidden">
+    <div className="border dark:border-slate-700 rounded-lg overflow-hidden dark:bg-slate-900/50">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-muted/50 transition-colors"
+        className="w-full flex items-center justify-between p-4 sm:p-5 text-left hover:bg-muted/50 dark:hover:bg-slate-800/50 transition-colors"
       >
         <span className="font-semibold text-sm sm:text-base pr-4">{item.question}</span>
         <motion.div
@@ -80,7 +80,7 @@ function FAQSectionItem({ item }: { item: FAQItem }) {
           transition={{ duration: 0.25 }}
           className="shrink-0"
         >
-          <ChevronDown className="h-5 w-5 text-muted-foreground" />
+          <ChevronDown className="h-5 w-5 text-muted-foreground dark:text-slate-400" />
         </motion.div>
       </button>
       <AnimatePresence initial={false}>
@@ -92,7 +92,7 @@ function FAQSectionItem({ item }: { item: FAQItem }) {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-muted-foreground text-sm leading-relaxed">
+            <div className="px-4 sm:px-5 pb-4 sm:pb-5 text-muted-foreground dark:text-slate-400 text-sm leading-relaxed">
               {item.answer}
             </div>
           </motion.div>
@@ -158,10 +158,10 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
                   className={`relative ${plan.highlighted ? 'lg:scale-105 z-10' : ''}`}
                 >
                   <Card
-                    className={`relative h-full transition-shadow duration-300 ${
+                    className={`relative h-full transition-shadow duration-300 dark:border-slate-700 ${
                       plan.highlighted
-                        ? 'border-emerald-600 shadow-lg shadow-emerald-600/20'
-                        : 'border-border hover:shadow-md'
+                        ? 'border-emerald-600 shadow-lg shadow-emerald-600/20 dark:bg-slate-900'
+                        : 'border-border dark:border-slate-700 hover:shadow-md dark:bg-slate-900/50'
                     }`}
                   >
                     {plan.highlighted && (
@@ -172,25 +172,25 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
                       </div>
                     )}
                     <CardHeader className="text-center pb-2 pt-6">
-                      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100">
-                        <PlanIcon className="h-7 w-7 text-emerald-600" />
+                      <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30">
+                        <PlanIcon className="h-7 w-7 text-emerald-600 dark:text-emerald-400" />
                       </div>
                       <CardTitle className="text-xl font-bold">{plan.name}</CardTitle>
                       <div className="mt-3">
                         <span
                           className={`text-4xl font-extrabold ${
-                            plan.highlighted ? 'text-emerald-600' : 'text-foreground'
+                            plan.highlighted ? 'text-emerald-600 dark:text-emerald-400' : 'text-foreground dark:text-slate-100'
                           }`}
                         >
                           {plan.price}
                         </span>
                         {plan.period && (
-                          <span className="text-muted-foreground text-sm ml-1">
+                          <span className="text-muted-foreground dark:text-slate-400 text-sm ml-1">
                             {plan.period}
                           </span>
                         )}
                       </div>
-                      <CardDescription className="mt-2 text-sm">
+                      <CardDescription className="mt-2 text-sm dark:text-slate-400">
                         {plan.description}
                       </CardDescription>
                     </CardHeader>
@@ -226,7 +226,7 @@ export default function PricingPage({ onNavigate }: PricingPageProps) {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-muted/40">
+      <section className="py-16 sm:py-20 lg:py-24 bg-muted/40 dark:bg-slate-900/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"

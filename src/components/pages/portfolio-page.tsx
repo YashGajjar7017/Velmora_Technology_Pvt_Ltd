@@ -123,11 +123,11 @@ export default function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card className="h-full overflow-hidden transition-shadow hover:shadow-xl py-0 gap-0">
+                  <Card className="h-full overflow-hidden transition-shadow hover:shadow-xl py-0 gap-0 flex flex-col dark:border-slate-700 dark:bg-slate-900">
                     {/* Image Area */}
-                    <div className="relative h-48 w-full overflow-hidden rounded-t-xl">
+                    <div className="relative h-48 w-full overflow-hidden rounded-t-xl bg-gradient-to-br from-gray-200 to-gray-300 dark:from-slate-700 dark:to-slate-800">
                       <img
-                        src="/portfolio-image.png"
+                        src={project.image}
                         alt={project.title}
                         className="h-full w-full object-cover"
                       />
@@ -139,20 +139,32 @@ export default function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                       </Badge>
                     </div>
 
-                    <CardHeader className="pt-5 pb-2">
+                    <CardHeader className="pt-5 pb-3">
                       <CardTitle className="text-lg">{project.title}</CardTitle>
                       <CardDescription className="text-muted-foreground leading-relaxed">
                         {project.description}
                       </CardDescription>
                     </CardHeader>
 
-                    <CardContent className="pb-5 pt-0">
+                    <CardContent className="pb-5 pt-0 flex flex-col gap-4 flex-1">
+                      {/* Stats row */}
+                      {project.stats && project.stats.length > 0 && (
+                        <div className="grid grid-cols-3 gap-3 py-3 px-2 rounded-lg bg-muted/50 dark:bg-slate-800/50">
+                          {project.stats.map((stat) => (
+                            <div key={stat.label} className="text-center">
+                              <div className="text-sm font-bold text-emerald-600 dark:text-emerald-400">{stat.value}</div>
+                              <div className="text-xs text-muted-foreground dark:text-slate-400">{stat.label}</div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+
                       {/* Tags row */}
-                      <div className="mb-4 flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap gap-1.5">
                         {project.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="inline-flex items-center rounded-md bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground"
+                            className="inline-flex items-center rounded-md bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground dark:bg-slate-800 dark:text-slate-300"
                           >
                             {tag}
                           </span>
@@ -160,13 +172,15 @@ export default function PortfolioPage({ onNavigate }: PortfolioPageProps) {
                       </div>
 
                       {/* View Case Study link */}
-                      <Button
-                        variant="ghost"
-                        className="group p-0 text-emerald-600 hover:text-emerald-700"
-                      >
-                        View Case Study
-                        <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                      </Button>
+                      <div className="mt-auto">
+                        <Button
+                          variant="ghost"
+                          className="group p-0 text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
+                        >
+                          View Case Study
+                          <ExternalLink className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>

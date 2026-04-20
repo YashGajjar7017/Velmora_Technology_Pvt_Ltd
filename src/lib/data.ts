@@ -246,7 +246,8 @@ export const FOUNDERS: Leader[] = [
     image: '/co-founder.png',
     bio: 'Yash brings deep technical expertise and a forward-thinking approach to Velmora. With a background in cloud architecture and AI from top-tier tech companies, He oversees all technical operations and innovation. Her leadership ensures Velmora stays at the cutting edge while maintaining the reliability and security clients depend on.',
     linkedin: 'https://www.linkedin.com/in/Yash_gajjar_offical/',
-    // twitter: 'https://twitter.com/Yash_gajjar_offical',
+    twitter: 'https://twitter.com/Yash_gajjar_offical',
+    Github : 'https://github.com/yashgajjar7017'
   },
 ]
 
@@ -274,6 +275,9 @@ export interface Project {
   category: string
   description: string
   tags: string[]
+  image: string
+  link?: string
+  stats?: { label: string; value: string }[]
 }
 
 export const PROJECTS: Project[] = [
@@ -283,6 +287,12 @@ export const PROJECTS: Project[] = [
     description:
       'A modern cloud-native banking platform handling 2M+ transactions daily with 99.99% uptime.',
     tags: ['React', 'Node.js', 'AWS', 'PostgreSQL'],
+    image: '/projects/finvault.png',
+    stats: [
+      { label: 'Transactions/Day', value: '2M+' },
+      { label: 'Uptime', value: '99.99%' },
+      { label: 'Users', value: '500K+' },
+    ],
   },
   {
     title: 'GreenLeaf Mobile App',
@@ -290,6 +300,12 @@ export const PROJECTS: Project[] = [
     description:
       'Cross-platform sustainability tracking app with 500K+ downloads and 4.8-star rating.',
     tags: ['React Native', 'Firebase', 'ML Kit'],
+    image: '/projects/greenleaf.png',
+    stats: [
+      { label: 'Downloads', value: '500K+' },
+      { label: 'Rating', value: '4.8★' },
+      { label: 'Active Users', value: '150K+' },
+    ],
   },
   {
     title: 'LogiCore Security Overhaul',
@@ -297,6 +313,12 @@ export const PROJECTS: Project[] = [
     description:
       'Complete security transformation including Zero Trust implementation and SOC 2 compliance.',
     tags: ['Zero Trust', 'SOC 2', 'SIEM', 'WAF'],
+    image: '/projects/logicore.png',
+    stats: [
+      { label: 'Threats Blocked', value: '10K+/day' },
+      { label: 'Response Time', value: '<5min' },
+      { label: 'Compliance', value: '100%' },
+    ],
   },
   {
     title: 'MedSync AI Diagnostics',
@@ -304,6 +326,12 @@ export const PROJECTS: Project[] = [
     description:
       'AI-powered medical imaging analysis system achieving 97% accuracy in early detection.',
     tags: ['Python', 'TensorFlow', 'DICOM', 'HIPAA'],
+    image: '/projects/medsync.png',
+    stats: [
+      { label: 'Accuracy', value: '97%' },
+      { label: 'Hospitals', value: '50+' },
+      { label: 'Scans Processed', value: '1M+' },
+    ],
   },
   {
     title: 'RetailMax E-Commerce',
@@ -311,6 +339,12 @@ export const PROJECTS: Project[] = [
     description:
       'Scalable e-commerce infrastructure supporting 100K concurrent users with sub-second load times.',
     tags: ['Next.js', 'Kubernetes', 'Redis', 'CDN'],
+    image: '/projects/retailmax.png',
+    stats: [
+      { label: 'Concurrent Users', value: '100K+' },
+      { label: 'Page Load', value: '<500ms' },
+      { label: 'Monthly Revenue', value: '$2M+' },
+    ],
   },
   {
     title: 'EduTech Learning Platform',
@@ -318,6 +352,90 @@ export const PROJECTS: Project[] = [
     description:
       'Interactive learning platform with real-time collaboration features serving 50K+ students.',
     tags: ['Vue.js', 'WebRTC', 'MongoDB', 'Socket.io'],
+    image: '/projects/edutech.png',
+    stats: [
+      { label: 'Students', value: '50K+' },
+      { label: 'Courses', value: '500+' },
+      { label: 'Completion Rate', value: '85%' },
+    ],
+  },
+  {
+    title: 'CloudFlow DevOps Platform',
+    category: 'Cloud Solutions',
+    description:
+      'Enterprise CI/CD platform enabling 1000+ deployments daily with zero-downtime releases.',
+    tags: ['Kubernetes', 'Jenkins', 'GitOps', 'Terraform'],
+    image: '/projects/cloudflow.png',
+    stats: [
+      { label: 'Daily Deployments', value: '1K+' },
+      { label: 'Teams', value: '200+' },
+      { label: 'Downtime Saved', value: '99.99%' },
+    ],
+  },
+  {
+    title: 'SocialSync AI Assistant',
+    category: 'AI & Machine Learning',
+    description:
+      'Intelligent social media management tool using NLP to generate 10K+ posts monthly with 40% higher engagement.',
+    tags: ['NLP', 'Python', 'GPT-4', 'React'],
+    image: '/projects/socialsync.png',
+    stats: [
+      { label: 'Posts Generated', value: '10K+/mo' },
+      { label: 'Engagement Lift', value: '+40%' },
+      { label: 'Users', value: '30K+' },
+    ],
+  },
+  {
+    title: 'SecureVault Encryption Suite',
+    category: 'Cybersecurity',
+    description:
+      'Military-grade encryption and key management solution protecting 10M+ data records with AES-256.',
+    tags: ['Encryption', 'HSM', 'AWS KMS', 'Compliance'],
+    image: '/projects/securevault.png',
+    stats: [
+      { label: 'Records Protected', value: '10M+' },
+      { label: 'Key Operations', value: '100M+/day' },
+      { label: 'Audit Logs', value: '1B+' },
+    ],
+  },
+  {
+    title: 'FitTrack Mobile Wellness',
+    category: 'Mobile Development',
+    description:
+      'AI-powered fitness and health tracking app with personalized workout plans serving 200K+ active users.',
+    tags: ['React Native', 'ML Kit', 'Firebase', 'Wearables'],
+    image: '/projects/fittrack.png',
+    stats: [
+      { label: 'Active Users', value: '200K+' },
+      { label: 'Workouts Created', value: '5M+' },
+      { label: 'Avg Retention', value: '78%' },
+    ],
+  },
+  {
+    title: 'DataHub Analytics Engine',
+    category: 'Web Development',
+    description:
+      'Real-time data analytics platform processing 500M+ events daily with millisecond latency dashboards.',
+    tags: ['Next.js', 'Apache Kafka', 'BigQuery', 'D3.js'],
+    image: '/projects/datahub.png',
+    stats: [
+      { label: 'Events/Day', value: '500M+' },
+      { label: 'Query Latency', value: '<100ms' },
+      { label: 'Dashboards', value: '5K+' },
+    ],
+  },
+  {
+    title: 'SupplyChain Automation',
+    category: 'Cloud Solutions',
+    description:
+      'Blockchain-based supply chain visibility platform reducing lead time by 35% across 200+ partners.',
+    tags: ['Blockchain', 'IoT', 'AWS', 'Smart Contracts'],
+    image: '/projects/supplychain.png',
+    stats: [
+      { label: 'Lead Time Reduction', value: '35%' },
+      { label: 'Supply Partners', value: '200+' },
+      { label: 'Transactions/Day', value: '500K+' },
+    ],
   },
 ]
 

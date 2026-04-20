@@ -126,10 +126,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
               <div className="mt-4 grid grid-cols-2 gap-6">
                 {STATS.map((stat) => (
                   <div key={stat.label} className="flex flex-col">
-                    <span className="text-3xl font-bold text-emerald-600">
+                    <span className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
                       {stat.value}
                     </span>
-                    <span className="text-sm text-muted-foreground">{stat.label}</span>
+                    <span className="text-sm text-muted-foreground dark:text-slate-400">{stat.label}</span>
                   </div>
                 ))}
               </div>
@@ -139,7 +139,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       </section>
 
       {/* ─── Mission, Vision, Values ─── */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-muted/30 dark:bg-slate-900/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -171,13 +171,13 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           >
             {missionVisionValues.map((item) => (
               <motion.div key={item.title} variants={fadeUp} whileHover={{ y: -6 }}>
-                <Card className="h-full text-center py-8">
+                <Card className="h-full text-center py-8 dark:border-slate-700 dark:bg-slate-900">
                   <CardHeader className="items-center gap-4">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
                       <item.icon className="h-7 w-7" />
                     </div>
                     <CardTitle className="text-xl">{item.title}</CardTitle>
-                    <CardDescription className="text-muted-foreground leading-relaxed">
+                    <CardDescription className="text-muted-foreground dark:text-slate-400 leading-relaxed">
                       {item.description}
                     </CardDescription>
                   </CardHeader>
@@ -224,10 +224,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 key={leader.name}
                 variants={fadeUp}
                 whileHover={{ y: -6 }}
-                className="flex flex-col items-center rounded-2xl border bg-card p-8 text-center shadow-sm transition-shadow hover:shadow-lg"
+                className="flex flex-col items-center rounded-2xl border dark:border-slate-700 bg-card dark:bg-slate-900 p-8 text-center shadow-sm transition-shadow hover:shadow-lg dark:hover:shadow-emerald-900/20"
               >
                 {/* Founder Image */}
-                <div className="mb-6 h-48 w-48 overflow-hidden rounded-full border-4 border-emerald-100 shadow-md">
+                <div className="mb-6 h-48 w-48 overflow-hidden rounded-full border-4 border-emerald-100 dark:border-emerald-900/30 shadow-md">
                   <img
                     src={leader.image}
                     alt={leader.name}

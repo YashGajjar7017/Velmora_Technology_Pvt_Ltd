@@ -107,7 +107,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* ─── Trusted By Section ─── */}
-      <section className="border-y bg-muted/30 py-12">
+      <section className="border-y border-border dark:border-slate-700 bg-muted/30 dark:bg-slate-900/30 py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={fadeUp}
@@ -173,9 +173,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card className="h-full transition-shadow hover:shadow-lg">
+                  <Card className="h-full transition-shadow hover:shadow-lg dark:border-slate-700 dark:bg-slate-900">
                     <CardHeader>
-                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
+                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
                         <Icon className="h-6 w-6" />
                       </div>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -186,7 +186,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     <CardContent>
                       <Button
                         variant="ghost"
-                        className="group p-0 text-emerald-600 hover:text-emerald-700"
+                        className="group p-0 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
                         onClick={() => onNavigate('services')}
                       >
                         Learn more
@@ -221,7 +221,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* ─── Why Choose Us Section ─── */}
-      <section className="bg-muted/40 py-20 md:py-24">
+      <section className="bg-muted/40 dark:bg-slate-900/50 py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={staggerContainer}
@@ -261,14 +261,14 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card className="h-full">
+                  <Card className="h-full dark:border-slate-700 dark:bg-slate-900">
                     <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
                         <Icon className="h-5 w-5" />
                       </div>
                       <div>
                         <CardTitle className="text-lg">{item.title}</CardTitle>
-                        <CardDescription className="mt-1.5 text-muted-foreground">
+                        <CardDescription className="mt-1.5 text-muted-foreground dark:text-slate-400">
                           {item.description}
                         </CardDescription>
                       </div>

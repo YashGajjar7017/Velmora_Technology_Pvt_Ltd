@@ -96,11 +96,11 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
                     transition={{ duration: 0.2 }}
                     className="h-full"
                   >
-                    <Card className="group h-full border-border/50 transition-shadow duration-300 hover:shadow-lg">
+                    <Card className="group h-full border-border/50 dark:border-slate-700 dark:bg-slate-900 transition-shadow duration-300 hover:shadow-lg dark:hover:shadow-emerald-900/30">
                       <CardHeader>
                         <div className="mb-4 flex items-center gap-4">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 transition-colors duration-300 group-hover:bg-emerald-600">
-                            <Icon className="h-6 w-6 text-emerald-600 transition-colors duration-300 group-hover:text-white" />
+                          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30 transition-colors duration-300 group-hover:bg-emerald-600">
+                            <Icon className="h-6 w-6 text-emerald-600 dark:text-emerald-400 transition-colors duration-300 group-hover:text-white" />
                           </div>
                           <CardTitle className="text-xl font-semibold">
                             {service.title}
@@ -124,7 +124,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
                         </ul>
                         <Button
                           variant="ghost"
-                          className="group/btn mt-2 text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50"
+                          className="group/btn mt-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
                           onClick={() => onNavigate('contact')}
                         >
                           Learn More
@@ -141,7 +141,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* Technology Stack Section */}
-      <section className="bg-muted/40 py-16 md:py-24">
+      <section className="bg-muted/40 dark:bg-slate-900/50 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             className="mb-12 text-center"
@@ -177,10 +177,10 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
                   <motion.div
                     whileHover={{ y: -2, scale: 1.02 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center gap-3 rounded-lg border border-border/50 bg-background p-4 shadow-sm transition-shadow duration-300 hover:shadow-md"
+                    className="flex items-center gap-3 rounded-lg border border-border/50 dark:border-slate-700 bg-background dark:bg-slate-900 p-4 shadow-sm transition-shadow duration-300 hover:shadow-md dark:hover:shadow-emerald-900/20"
                   >
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-emerald-100">
-                      <Icon className="h-5 w-5 text-emerald-600" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-emerald-100 dark:bg-emerald-900/30">
+                      <Icon className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
                     </div>
                     <span className="text-sm font-medium">{tech.name}</span>
                   </motion.div>

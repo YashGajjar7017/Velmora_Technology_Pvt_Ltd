@@ -1,6 +1,6 @@
 'use client'
 
-import { Menu, ArrowRight, ChevronRight } from 'lucide-react'
+import { Menu, ArrowRight, ChevronRight, Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/sheet'
 import { Separator } from '@/components/ui/separator'
 import { type PageName, NAV_ITEMS } from '@/lib/data'
+import { useTheme } from '@/lib/theme-provider'
 
 interface NavbarProps {
   currentPage: string
@@ -19,6 +20,8 @@ interface NavbarProps {
 }
 
 export function Navbar({ currentPage, onNavigate }: NavbarProps) {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -61,7 +64,16 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center gap-3">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-9 w-9 rounded-full hover:bg-accent"
+            title="Switch to dark mode"
+          >
+            <Moon className="h-5 w-5" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
           <Button
             onClick={() => onNavigate('contact')}
             className="bg-emerald-600 text-white hover:bg-emerald-700 gap-2"
@@ -72,7 +84,21 @@ export function Navbar({ currentPage, onNavigate }: NavbarProps) {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="h-9 w-9 rounded-full hover:bg-accent"
+            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          >
+            {theme === 'light' ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="h-9 w-9">
